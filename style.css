@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:white;   
+    --secondary-color:black;   
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+section{
+    margin: 3rem!important;
+}
+/* 
+    Utility Class
+*/
+.flex{
+    display: flex;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* 
+    Header Class
+*/
+
+
+header{
+    justify-content: space-between;
+    background: yellow;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+
+}
+
+header > img{
+    height: 1.45rem;
+}
+
+.SearchBox{
+    align-items: center;
+    background: white;
+    padding: 0.2rem;
+}
+.SearchBox > i{
+    cursor: pointer;
+}
+.SearchBoxInput{
+    border: none;
+    outline: none;
+}
+
+.SearchBoxInput::placeholder{
+    color: black;
+}
+
+.headerButtons > *{
+    margin-right: 1rem;
+}
+
+.headerButtons > *:link, 
+.headerButtons > *:visited{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* 
+    Sub-header Sections
+*/
+
+
+.subHeader{
+    background: black;
+    color: white;
+    justify-content: center;
+    padding: 0.6rem 0;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.subHeader > span{
+    padding: 0 2rem;
+    border-right: 1px solid white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.subHeader > .Socials{
+    padding: 0 1.8rem;
+    align-items: center;
+}
+
+.Socials > *{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* 
+    Big News Content
+*/
+
+    .container {
+        margin: 0 auto; /* Add this line to center the container horizontally */
+    padding: 4.5rem 60px 0px;
+
+        max-width: 1182px;  
+    }
+    
+
+
+.bigNews{
+    gap: 2rem;
+}
+
+
+.bigNewsContent{
+    width: 45%;
+}
+
+.bigNewsImage{
+    height: inherit;
+    width: 55%;
+    background: url("./Images/https___images.genius.com_7a0a887a47f80933ad4146100ac746b7.999x999x1.png");
+    height:25rem;
+    background-position: center;
+    background-size: repeat;
+}
+
+.bigNewsContent > h2:hover{
+        text-decoration: underline;
+}
+
+.headingHr{
+    align-items: center;
+
+}
+.headingHr::after{
+    content: "";
+    flex: 1;
+    background: black;
+    height: 2px;
+}
+
+.smallNewsHeading > h3{
+    margin-bottom: 6rem;
+    cursor: pointer;
+
+}
+.smallNewsHeading > h3:hover{
+    text-decoration: underline;
+}
+
+
+.smallNewsImageSrc{
+    width: 100%;
+    height: 8rem;
+ 
+    background: url("./Images/https___images.genius.com_395eb4a5e6aa04c8574425345cd816f5.300x300x1.png");
+    background-size: contain;
+}
+
+.smallNewsContent{
+    height: 100%;
+    /* border-right: 2px solid black; */
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+
+
+/* Creating line using after */
+
+.smallNewsContent::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: black;
+
+}
+
+.smallNewsContent:last-of-type::after {
+    width: 0px;
+}
+
+
+.headingMusic{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.headingMusic h1{
+    font-size: 70px;
+}
+
+.headingMusic span{
+    border: 2px solid black;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.musicName{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(206, 202, 202);
+    padding-top: 0.5rem;
+}
+
+.authorImg{
+    width: 20%;
+    justify-content: space-between;
+}
+.authorImg>img{
+    height: 4rem;
+}
+
+.songName, .songAuthor{
+    width: 30%;
+}
+.musicViews{
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.musicViews i{
+    margin-right: 5px;
+}
+
+.songName{
+    padding: 0px 2rem;
+    align-items: center;
+}
+.songName> #songName{
+    margin-right: 0.4rem;
+}
+
+.songName > span:last-child{
+    color: rgb(154, 136, 136);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+#songName{
+    font-size: 1.6rem;
+}
+
+.musicName:hover {
+    background: rgb(219, 212, 212);
+}
+
+
+
+
+/*
+
+    Utility class for button
+
+ */
+
+.btn{
+    padding:0.75rem 2rem;
+}
+
+.btnPrimary{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.btnPrimary:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btnSecondary{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btnSecondary:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.chartSec{
+    justify-content: center;
+    margin-top: 2rem;
+}
+
